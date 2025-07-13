@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Classic Mug",
+    "style": "Ceramic",
+    "price": "₹299",
+    "image": "images/classic-mug.jpg",
+    "category": "mugs"
+  },
+  {
+    "name": "Notebook Pro",
+    "style": "A5 Spiral",
+    "price": "₹149",
+    "image": "images/notebook-pro.jpg",
+    "category": "notebooks"
+  }
+   , {
+    "name": "Notebook Pro",
+    "style": "A5 Spiral",
+    "price": "₹149",
+    "image": "images/notebook-pro.jpg",
+    "category": "notebooks"
+  }
+  , {
+    "name": "Notebook Pro",
+    "style": "A5 Spiral",
+    "price": "₹149",
+    "image": "images/notebook-pro.jpg",
+    "category": "notebooks"
+  }
+]

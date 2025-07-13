@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue Menu</title>
+  <link rel="stylesheet" href="index.css">
+
+
+</head>
+  <header class="site-header">
+  <img src="images/logo.png" alt="Your Logo" class="logo">
+</header>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li onclick="filterCategory('all')">All Products</li>
+        <li onclick="filterCategory('mugs')">Mugs</li>
+        <li onclick="filterCategory('notebooks')">Notebooks</li>
+        <!-- Add more categories -->
+      </ul>
+    </aside>
+
+    <main id="catalogues">
+    
+    </main>
+  </div>
+  <button onclick="submitOrder()">Send to WhatsApp</button>
+  <script src="scriptpage.js"></script>
+</body>
+</html>

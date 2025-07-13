@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#catalogues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 calc(25% - 20px); /* 4 cards on desktop */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-controls span.quantity {
+  font-size: 18px;
+  min-width: 20px;
+  text-align: center;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1 1 200px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+.site-header {
+  display: flex;
+  justify-content: flex-start; /* aligns to the left */
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  max-height: 80px;
+  height: auto;
+}
+.quantity-controls button {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2px;
+}
+#catalogues {
+  flex: 3 1 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #catalogues .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards on mobile */
+  }
+}
