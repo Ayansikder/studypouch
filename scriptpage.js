@@ -41,7 +41,7 @@ function renderStoredProductsFromJSON() {
         card.setAttribute('data-category', product.category || 'uncategorized');
 
         card.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${product.image}" alt="${product.name}" style="width:250px; height:250px;">
           <h3>${product.name}</h3>
           <p>${product.style}</p>
           <p>${product.price}</p>
@@ -96,7 +96,7 @@ function submitOrder() {
   }
 
   const message = encodeURIComponent("Hello! I'm interested in these products:\n\n" + messageLines.join('\n'));
-  const phoneNumber = "918123456789"; // Replace with your actual WhatsApp number
+  const phoneNumber = "919062504519"; // Replace with your actual WhatsApp number
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 }
 

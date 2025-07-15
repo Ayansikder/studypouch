@@ -1,26 +1,19 @@
 [
   {
-    "name": "Classic Mug",
-    "style": "Ceramic",
-    "price": "₹299",
-    "image": "images/classic-mug.jpg",
-    "category": "mugs"
+    "name": "Hand Paper Soap",
+    "style": "Colour: Green",
+    "price": "₹30",
+    "image": "images/Green_Paper_Soap.jpg",
+    "category": "Paper Soaps"
   },
   {
-    "name": "Notebook Pro",
-    "style": "A5 Spiral",
-    "price": "₹149",
-    "image": "images/notebook-pro.jpg",
-    "category": "notebooks"
-  }
-   , {
-    "name": "Notebook Pro",
-    "style": "A5 Spiral",
-    "price": "₹149",
-    "image": "images/notebook-pro.jpg",
-    "category": "notebooks"
-  }
-  , {
+    "name": "Hand Paper Soap",
+    "style": "Colour: Pink",
+    "price": "₹30",
+    "image": "images/Pink_Paper_Soap.jpeg",
+    "category": "Paper Soaps"
+  },
+  {
     "name": "Chocolate Diary",
     "style": "Chocolaty Themed",
     "price": "₹75",
