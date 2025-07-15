@@ -21,10 +21,10 @@
     "category": "notebooks"
   }
   , {
-    "name": "Notebook Pro",
-    "style": "A5 Spiral",
-    "price": "₹149",
-    "image": "images/notebook-pro.jpg",
-    "category": "notebooks"
+    "name": "Chocolate Diary",
+    "style": "Chocolaty Themed",
+    "price": "₹75",
+    "image": "images/Chocolate_Diary.jpeg",
+    "category": "Diary"
   }
 ]
