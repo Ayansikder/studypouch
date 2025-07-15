@@ -44,7 +44,6 @@ function renderStoredProductsFromJSON() {
           <img src="${product.image}" alt="${product.name}" style="width:250px; height:250px;">
           <h3>${product.name}</h3>
           <p>${product.style}</p>
-          <p>${product.price}</p>
           <div class="quantity-controls">
             <button class="minus">−</button>
             <span class="quantity">0</span>

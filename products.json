@@ -19,5 +19,19 @@
     "price": "₹75",
     "image": "images/Chocolate_Diary.jpeg",
     "category": "Diary"
+  },
+  {
+    "name": "SKU_ID: 5822 Panda Pencil Bags",
+    "style": "Panda Themed",
+    "price": "₹200",
+    "image": "images/panda_pencil_bag_5822.jpeg",
+    "category": "Pencil Bags"
+  },
+  {
+    "name": "SKU_ID: 9006 Panda Pencil Bags",
+    "style": "Panda Themed",
+    "price": "₹200",
+    "image": "images/panda_pencil_bag_9006.jpeg",
+    "category": "Pencil Bags"
   }
 ]
