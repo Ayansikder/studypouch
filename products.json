@@ -33,5 +33,19 @@
     "price": "₹200",
     "image": "images/panda_pencil_bag_9006.jpeg",
     "category": "Pencil Bags"
+  },
+  {
+    "name": "Tom Key Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Tom.jpeg",
+    "category": "Key Rings"
+  },
+  {
+    "name": "Jerry Key Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Jerry.jpeg",
+    "category": "Key Rings"
   }
 ]
