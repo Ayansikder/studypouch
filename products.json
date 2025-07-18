@@ -47,5 +47,47 @@
     "price": "₹30",
     "image": "images/Jerry.jpeg",
     "category": "Key Rings"
+  },  
+  {
+    "name": "Unicorn Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Unicorn.jpeg",
+    "category": "Key Rings"
+  },  
+  {
+    "name": "Kitty Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Kitty.jpeg",
+    "category": "Key Rings"
+  },  
+  {
+    "name": "Black Nike Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Black_Nike.jpeg",
+    "category": "Key Rings"
+  },  
+  {
+    "name": "Yellow Nike Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Yellow_Nike.jpeg",
+    "category": "Key Rings"
+  },  
+  {
+    "name": "Mini Kitty Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/Mini_Kitty.jpeg",
+    "category": "Key Rings"
+  },  
+  {
+    "name": "SpiderMan Ring",
+    "style": "Key Rings",
+    "price": "₹30",
+    "image": "images/SpiderMan.jpeg",
+    "category": "Key Rings"
   }
 ]
