@@ -10,16 +10,22 @@
   <meta http-equiv="Expires" content="0">
 
   <title>Catalogue Menu</title>
+
   <link rel="stylesheet" href="index.css">
+  <!-- Font Awesome for hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
-</head>
-  <header class="site-header">
-  <img src="images/logo.png" alt="Your Logo" class="logo">
-</header>
+  </head>
 <body>
+  <header class="site-header">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu">
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+    <img src="images/logo.png" alt="Your Logo" class="logo">
+  </header>
   <div class="container">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebarMenu">
       <h2>Categories</h2>
       <ul>
         <li onclick="filterCategory('all')">All Products</li>
@@ -30,9 +36,7 @@
         <!-- Add more categories -->
       </ul>
     </aside>
-
     <main id="catalogues">
-    
     </main>
   </div>
   <button onclick="submitOrder()">Order via WhatsApp</button>

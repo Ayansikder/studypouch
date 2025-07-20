@@ -1,7 +1,120 @@
+.hamburger.hide {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .site-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    display: flex;
+  }
+  .logo {
+    margin: 0 auto;
+    display: block;
+    max-width: 120px;
+    height: auto;
+  }
+}
+.hamburger i.fas.fa-bars {
+  color: #000;
+  font-size: 2rem;
+}
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 12px;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  background: #000;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: left 0.3s;
+    padding-top: 60px;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+  main#catalogues {
+    margin-left: 0;
+  }
+}
+
+/* Overlay for sidebar */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+/* Hamburger styles */
+.site-header {
+/* Reverted to original, removed hamburger and responsive sidebar changes */
+}
+/* Optional: overlay for sidebar */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
+.sidebar.open ~ .sidebar-overlay {
+  display: block;
+}
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #fff;
+  background: #f5f5dc;
 }
 
 h1 {
@@ -81,7 +194,7 @@ button {
   flex: 1 1 200px;
   padding: 20px;
   border-right: 1px solid #ccc;
-  background-color: #f2f2f2;
+  background-color: #f5f5dc;
 }
 
 .sidebar ul {
