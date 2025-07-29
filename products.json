@@ -89,5 +89,55 @@
     "price": "₹30",
     "image": "images/SpiderMan.jpeg",
     "category": "Key Rings"
+  },  
+  {
+    "name": "Barbie Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/Barbie_Bags.jpg",
+    "category": "Pencil Bags"
+  },  
+  {
+    "name": "Barbie Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/Barbie_Bags_2.jpg",
+    "category": "Pencil Bags"
+  },
+  {
+    "name": "Captain America Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/Captain_America_Bags.jpg",
+    "category": "Pencil Bags"
+  },
+  {
+    "name": "Iron Man Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/IronMan_Bags.jpg",
+    "category": "Pencil Bags"
+  },
+  {
+    "name": "Naruto Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/Naruto_Bags.jpg",
+    "category": "Pencil Bags"
+  },
+  {
+    "name": "Spider Man Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/SpiderMan_Bags.jpg",
+    "category": "Pencil Bags"
+  }
+  ,
+  {
+    "name": "The Frozen Bags",
+    "style": "Colour: Variant",
+    "price": "₹120",
+    "image": "images/Frozen_Bags.jpg",
+    "category": "Pencil Bags"
   }
 ]
