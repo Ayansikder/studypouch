@@ -153,7 +153,7 @@ function submitOrder() {
     const quantity = parseInt(card.querySelector('.quantity')?.textContent);
 
     if (quantity > 0) {
-      messageLines.push(`${title} | ${style} | ${price} | Quantity: ${quantity}`);
+      messageLines.push(`${title} | ${style} | Quantity: ${quantity}`);
     }
   });
 
@@ -175,3 +175,31 @@ function filterCategory(category) {
     card.style.display = (category === 'all' || cardCategory === category) ? 'block' : 'none';
   });
 }
+
+// Sale countdown timer
+function updateSaleTimer() {
+  // Set the sale end date (September 5, 2025, 23:59:59)
+  const endDate = new Date('2025-09-05T23:59:59');
+  const now = new Date();
+  const difference = endDate - now;
+
+  if (difference <= 0) {
+    // Sale has ended
+    document.querySelector('.sale-timer').innerHTML = '<p>Sale has ended!</p>';
+    return;
+  }
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  document.querySelector('.days').textContent = days.toString().padStart(2, '0');
+  document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
+  document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+  document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+}
+
+// Update timer every second
+setInterval(updateSaleTimer, 1000);
+updateSaleTimer(); // Initial call
