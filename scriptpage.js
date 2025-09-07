@@ -10,24 +10,59 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(overlay);
   }
 
-  function closeSidebar() {
-    sidebar.classList.remove('open');
-    overlay.style.display = 'none';
-    hamburgerBtn.classList.remove('hide');
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.style.display = 'block';
+    setTimeout(() => overlay.classList.add('visible'), 10);
+    document.body.style.overflow = 'hidden';
   }
 
-  hamburgerBtn.addEventListener('click', function() {
-    sidebar.classList.toggle('open');
-    const isOpen = sidebar.classList.contains('open');
-    overlay.style.display = isOpen ? 'block' : 'none';
-    if (isOpen) {
-      hamburgerBtn.classList.add('hide');
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    setTimeout(() => overlay.style.display = 'none', 300);
+    document.body.style.overflow = '';
+  }
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, false);
+
+  function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+    if (swipeDistance > 50 && touchStartX < 30) {
+      openSidebar();
+    } else if (swipeDistance < -50 && sidebar.classList.contains('open')) {
+      closeSidebar();
+    }
+  }
+
+  hamburgerBtn.addEventListener('click', () => {
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
     } else {
-      hamburgerBtn.classList.remove('hide');
+      openSidebar();
     }
   });
 
   overlay.addEventListener('click', closeSidebar);
+
+  // Close sidebar when clicking a category on mobile
+  sidebar.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
+  });
 });
 // ========== QUANTITY CONTROLS ==========
 function initializeQuantityControls(card) {
@@ -176,30 +211,3 @@ function filterCategory(category) {
   });
 }
 
-// Sale countdown timer
-function updateSaleTimer() {
-  // Set the sale end date (September 5, 2025, 23:59:59)
-  const endDate = new Date('2025-09-05T23:59:59');
-  const now = new Date();
-  const difference = endDate - now;
-
-  if (difference <= 0) {
-    // Sale has ended
-    document.querySelector('.sale-timer').innerHTML = '<p>Sale has ended!</p>';
-    return;
-  }
-
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-  document.querySelector('.days').textContent = days.toString().padStart(2, '0');
-  document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
-  document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
-  document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
-}
-
-// Update timer every second
-setInterval(updateSaleTimer, 1000);
-updateSaleTimer(); // Initial call
